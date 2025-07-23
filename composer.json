@@ -1,0 +1,35 @@
+{
+    "name": "mr-sem-s/app-daf",
+    "autoload": {
+        "psr-4": {
+            "MrSemS\\AppDaf\\": "src/",
+            "App\\Entities\\": "src/Entities",
+            "App\\Services\\": "src/Services",
+            "App\\Repositories\\": "src/Repositories",
+            "App\\Core\\Abstract\\": "App/Core/abstract",
+            "App\\Core\\": "App/Core",
+            "App\\Config\\": "App/Config",
+            "App\\Controllers\\": "src/Controllers",
+            "App\\Core\\Middlewares\\": "App/Core/middlewares",
+            "App\\Src\\Enums\\": "src/enums",
+            "App\\Migrations\\": "migrations",
+            "App\\Seeders\\": "seeders"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "pape sembene",
+            "email": "sembenpape4@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "mrsems/router-php": "^1.0"
+    },
+
+    "scripts": {
+        "database:migrate": "php migrations/Migration.php",
+        "database:seed": "php seeders/Seeder.php"
+    }
+}
