@@ -22,9 +22,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Configure Nginx
-COPY .docker/nginx/default.conf /etc/nginx/sites-available/default
-RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-RUN rm -f /etc/nginx/sites-enabled/default.bak
+COPY .docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
